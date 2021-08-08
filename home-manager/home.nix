@@ -22,5 +22,7 @@
   imports = [
     ./fonts.nix
     ./programs/alacritty/default.nix
+    ./programs/rofi/default.nix
+    ./services/xmonad/default.nix
   ];
 }
