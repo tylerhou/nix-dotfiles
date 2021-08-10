@@ -137,6 +137,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
   \ 'coc-prettier',
   \ ]
 
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 set tabstop=4
@@ -194,6 +196,3 @@ set encoding=utf-8
 
 " Mouse mode!
 set mouse=a
-
-" Auto change directories
-set autochdir

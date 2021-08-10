@@ -30,6 +30,7 @@
     ./programs/fzf/default.nix
     ./programs/neovim/default.nix
     ./programs/rofi/default.nix
+    ./programs/tmux/default.nix
     ./programs/zsh/default.nix
     ./services/xmonad/default.nix
   ];

@@ -7,6 +7,7 @@
     shellAliases = {
       "vim" = "nvim";
       "ls" = "ls --color=auto";
+      "tmux" = "tmux -2";
     };
 
     # TODO: Enable when home-manager/pull/2144 is backported.
@@ -14,6 +15,7 @@
 
     sessionVariables = {
       "EDITOR" = "nvim";
+      "TERM" = "screen-256color";
     };
 
     oh-my-zsh = {
@@ -42,6 +44,9 @@
           cd $dir
         fi
       }
+
+      bindkey "^P" up-line-or-search
+      bindkey "^N" down-line-or-search
     '';
   };
 
