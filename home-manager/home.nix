@@ -21,6 +21,7 @@
 
   home.packages = [
     pkgs.nodejs
+    pkgs.pure-prompt
   ];
 
   imports = [
@@ -28,6 +29,7 @@
     ./programs/alacritty/default.nix
     ./programs/neovim/default.nix
     ./programs/rofi/default.nix
+    ./programs/zsh/default.nix
     ./services/xmonad/default.nix
   ];
 }
