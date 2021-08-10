@@ -41,8 +41,6 @@
   services.xserver.enable = true;
   services.xserver.windowManager.xmonad.enable = true;
 
-
-
   # Configure keymap in X11
   services.xserver.layout = "us";
   services.xserver.xkbOptions = "terminate:ctrl_alt_bksp";
@@ -58,10 +56,10 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users.jane = {
-  #   isNormalUser = true;
-  #   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  # };
+  users.users.tylerhou = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -79,10 +77,10 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # List services that you want to enable:
 
