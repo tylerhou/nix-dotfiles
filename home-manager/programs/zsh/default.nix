@@ -12,6 +12,10 @@
     # TODO: Enable when home-manager/pull/2144 is backported.
     # enableSyntaxHighlighting = true;
 
+    sessionVariables = {
+      "EDITOR" = "nvim";
+    };
+
     oh-my-zsh = {
       plugins = [ "git" ];
     };
