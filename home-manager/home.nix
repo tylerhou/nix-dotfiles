@@ -19,9 +19,14 @@
   # changes in each release.
   home.stateVersion = "21.05";
 
+  home.packages = [
+    pkgs.nodejs
+  ];
+
   imports = [
     ./fonts.nix
     ./programs/alacritty/default.nix
+    ./programs/neovim/default.nix
     ./programs/rofi/default.nix
     ./services/xmonad/default.nix
   ];
