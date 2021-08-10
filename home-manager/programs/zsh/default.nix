@@ -7,7 +7,8 @@
     shellAliases = {
       "vim" = "nvim";
       "ls" = "ls --color=auto";
-      "tmux" = "tmux -2";
+      # TODO: 256 colors do not work unless we set TERM here.
+      "tmux" = "TERM=tmux-256color tmux -2";
     };
 
     # TODO: Enable when home-manager/pull/2144 is backported.
@@ -15,12 +16,10 @@
 
     sessionVariables = {
       "EDITOR" = "nvim";
-      "TERM" = "screen-256color";
     };
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ];
     };
 
     initExtra = ''
