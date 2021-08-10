@@ -27,6 +27,7 @@
   imports = [
     ./fonts.nix
     ./programs/alacritty/default.nix
+    ./programs/fzf/default.nix
     ./programs/neovim/default.nix
     ./programs/rofi/default.nix
     ./programs/zsh/default.nix
