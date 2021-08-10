@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Let Home Manager install and manage itself.
@@ -22,6 +22,11 @@
   home.packages = [
     pkgs.nodejs
     pkgs.pure-prompt
+    pkgs.corefonts
+  ];
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "corefonts"
   ];
 
   imports = [
