@@ -33,6 +33,7 @@
     ./fonts.nix
     ./programs/alacritty/default.nix
     ./programs/fzf/default.nix
+    ./programs/git/default.nix
     ./programs/neovim/default.nix
     ./programs/rofi/default.nix
     ./programs/tmux/default.nix

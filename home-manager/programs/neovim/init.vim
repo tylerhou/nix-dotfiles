@@ -135,6 +135,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
   \ 'coc-tsserver',
   \ 'coc-eslint',
   \ 'coc-prettier',
+  \ 'coc-pyright',
   \ ]
 
 Plug 'christoomey/vim-tmux-navigator'
