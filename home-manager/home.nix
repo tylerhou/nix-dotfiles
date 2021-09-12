@@ -23,6 +23,8 @@
     pkgs.nodejs
     pkgs.pure-prompt
     pkgs.corefonts
+    pkgs.texlive.combined.scheme-full
+    pkgs.inotify-tools
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
