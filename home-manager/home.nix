@@ -7,7 +7,7 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "tylerhou";
-  home.homeDirectory = "/home/tylerhou";
+  home.homeDirectory = "/Users/tylerhou";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -24,7 +24,6 @@
     pkgs.pure-prompt
     pkgs.corefonts
     pkgs.texlive.combined.scheme-full
-    pkgs.inotify-tools
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -37,9 +36,7 @@
     ./programs/fzf/default.nix
     ./programs/git/default.nix
     ./programs/neovim/default.nix
-    ./programs/rofi/default.nix
     ./programs/tmux/default.nix
     ./programs/zsh/default.nix
-    ./services/xmonad/default.nix
   ];
 }

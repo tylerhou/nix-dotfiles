@@ -8,7 +8,7 @@
       "vim" = "nvim";
       "ls" = "ls --color=auto";
       # TODO: 256 colors do not work unless we set TERM here.
-      "tmux" = "TERM=tmux-256color tmux -2";
+      "tmux" = "TERM=xterm-256color tmux -2";
     };
 
     # TODO: Enable when home-manager/pull/2144 is backported.
@@ -16,6 +16,7 @@
 
     sessionVariables = {
       "EDITOR" = "nvim";
+      "NIX_PATH" = "$HOME/.nix-defexpr/channels\${NIX_PATH:+:}$NIX_PATH";
     };
 
     oh-my-zsh = {
@@ -45,8 +46,16 @@
         fi
       }
 
-      bindkey "^P" up-line-or-search
-      bindkey "^N" down-line-or-search
+      ssh-check-agent () {
+        if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+          eval `ssh-agent`
+          ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+        fi
+        export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+        ssh-add -l > /dev/null || ssh-add
+      }
+
+      ssh-check-agent
     '';
   };
 

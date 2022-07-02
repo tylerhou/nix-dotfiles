@@ -26,8 +26,8 @@
       bind-key -T copy-mode-vi 'C-\' select-pane -l
 
       # Proper colors for vim.
-      set -g default-terminal "tmux-256color"
-      set-option -ga terminal-overrides ",tmux-256color:Tc"
+      set -g default-terminal "xterm-256color"
+      set-option -ga terminal-overrides ",xterm-256color:Tc"
 
       # Italics
       set -as terminal-overrides ',*:sitm=\E[3m'
