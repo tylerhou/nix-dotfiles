@@ -64,14 +64,12 @@ Plug 'junegunn/goyo.vim'
 
   nmap <leader>p :Goyo<CR>
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
   nmap <silent> <leader><space> :Files<CR>
   nmap <silent> <leader>f :Buffers<CR>
   nmap <silent> <leader>? :History<CR>
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 
 " Repeat plugin commands (e.g. vim-surround).
@@ -140,7 +138,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'christoomey/vim-tmux-navigator'
 
+Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'kyazdani42/nvim-web-devicons'
+
 call plug#end()
+
+lua require('lualine').setup()
 
 set tabstop=4
 set shiftwidth=4
@@ -174,23 +178,18 @@ set splitright
 inoremap kj <Esc>
 inoremap <ESC> <NOP>
 
+" Set true colors (NeoVim). Feline needs it.
+set termguicolors
+
 " Reload on file write
 set autoread
 
 " Buffer around cursor
 set scrolloff=6
 
-" Set true colors (NeoVim)
-set termguicolors
-
 " Turn on syntax highlighting
 set background=dark
 colorscheme NeoSolarized
-
-" Airline
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
-let g:airline_powerline_fonts = 1
 
 " Enable powerline symbols
 set encoding=utf-8

@@ -41,6 +41,9 @@
       # Mouse mode
       run-shell ~/.config/tmux/plugins/tmux-better-mouse-mode/scroll_copy_mode.tmux
       set-option -g mouse on
+
+      # New windows/panes in the current directory.
+      bind c new-window -c "#{pane_current_path}"
     '';
   };
 }
